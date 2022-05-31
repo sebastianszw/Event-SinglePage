@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event. - We Love Dance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/69aa13af25.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="container">
+        <div class="logo">
+            <p>EVENT.</p>
+        </div>
+        <div class="menu">
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#artists">artists</a>
+                </li>
+                <li>
+                    <a href="#tickets">tickets</a>
+                </li>
+                <li>
+                    <a href="#contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="container" id="home">
+        <div class="text__container">
+            <div class="header__text">
+                <p class="headerDate">02 - 04 march. 2022</p>
+                <h1>we <br> love dance</h1>
+                <p>The best festival in the world.</p>
+            </div>
+        </div>
+        <div class="header__scroll bounce">
+            <p>scroll for more</p>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </header>
+
+    <div id="artists"></div>
+    <section class="artists container">
+        <h1 class="artist__title">Artists</h1>
+        <div class="artists__gallery">
+            <!-- top -->
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Spine Animator">
+                <p>Artist name</p>
+            </div>
+            <!-- bottom -->
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+
+            <div class="artist__card">
+                <img src="images/person.jpg" alt="Artist name">
+                <p>Artist name</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="tickets"></div>
+    <section class="tickets container">
+        <h1 class="tickets__title">Tickets</h1>
+        <div class="tickets__gallery">
+            <div class="ticket__card ticket__card__silver">
+                <p class="card__title silver">silver</p>
+                <h1 class="card__price">$100</h1>
+                <ul class="card__list">
+                    <li>Ticket for one day.</li>
+                </ul>
+                <button type="button" class="card__button">buy</button>
+            </div>
+
+            <div class="ticket__card ticket__card__gold">
+                <p class="card__title gold">gold</p>
+                <h1 class="card__price">$200</h1>
+                <ul class="card__list">
+                    <li>Ticket for two days.</li>
+                    <li>text</li>
+                    <button type="button" class="card__button">buy</button>
+                </ul>
+            </div>
+
+            <div class="ticket__card ticket__card__platinum">
+                <p class="card__title platinum">platinum</p>
+                <h1 class="card__price">$400</h1>
+                <ul class="card__list">
+                    <li>Ticket for three days.</li>
+                    <li>text</li>
+                    <li>text</li>
+                    <button type="button" class="card__button">buy</button>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact"></div>
+    <section class="contact container">
+        <h1>Contact</h1>
+        <div class="contact__container">
+            <div class="contact__text">
+                <h2>Have any questions? Lets us help you.</h2>
+            </div>
+            <div class="contact__form">
+                <form action="">
+                    <label for="name"></label>
+                    <input type="text" id="name" placeholder="Your name">
+                    <label for="surname"></label>
+                    <input type="text" id="surname" placeholder="Your surname">
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="E-mail">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" placeholder="Message""></textarea>
+                    <div class=" button">
+                        <button type="submit">send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="footer__text">
+            Created by <a href="https://github.com/sebastianszw">Sebastian Szwankowski</a>
+        </div>
+        <div class="footer_nav">
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#artists">artists</a>
+                </li>
+                <li>
+                    <a href="#tickets">tickets</a>
+                </li>
+                <li>
+                    <a href="#contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0e1212;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+}
+
+.container {
+  padding: 0 150px;
+}
+
+.artists h1,
+.tickets h1,
+.contact h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+#artists,
+#tickets,
+#contact {
+  height: 80px;
+}
+
+/*---------------NAVIGATION---------------*/
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(14, 18, 18, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  z-index: 1;
+}
+
+nav #click {
+  display: none;
+}
+
+nav i {
+  cursor: pointer;
+  font-size: 22px;
+  display: none !important;
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #b4b5b5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+nav li a:hover {
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.button button {
+  font-size: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.button button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*---------------HEADER---------------*/
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(14, 18, 18, 0.9)), to(rgba(14, 18, 18, 0))), url("../images/header.jpg");
+  background-image: linear-gradient(to top, rgba(14, 18, 18, 0.9) 10%, rgba(14, 18, 18, 0)), url("../images/header.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text__container {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__text h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.header__text p {
+  font-size: 20px;
+}
+
+.header__text p.headerDate {
+  text-transform: uppercase;
+}
+
+.header__scroll {
+  margin-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.header__scroll i {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*---------------ARTISTS---------------*/
+.artists__gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  grid-auto-columns: 1fr;
+  padding-bottom: 100px;
+}
+
+.artist__card {
+  cursor: pointer;
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.artist__card:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.artist__card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+/*---------------TICKETS---------------*/
+.tickets__gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  grid-auto-columns: 1fr;
+  place-items: center;
+}
+
+.ticket__card {
+  background-color: #151818;
+  width: 100%;
+  height: 500px;
+  padding: 50px 50px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ticket__card:hover {
+  -webkit-transform: translateY(-10px) !important;
+          transform: translateY(-10px) !important;
+  background-color: #1f2222;
+}
+
+.ticket__card li {
+  list-style: none;
+}
+
+.card__title {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.silver {
+  background: -webkit-gradient(linear, left top, right top, from(#f9ffff), to(#d6e6f4));
+  background: linear-gradient(to right, #f9ffff 0%, #d6e6f4 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold {
+  background: -webkit-gradient(linear, left top, right top, from(#f7ee6d), to(#dca650));
+  background: linear-gradient(to right, #f7ee6d 0%, #dca650 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.platinum {
+  background: -webkit-gradient(linear, left top, right top, from(#73dffa), to(#5cacdc));
+  background: linear-gradient(to right, #73dffa 0%, #5cacdc 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card__button {
+  background-color: transparent;
+  padding: 15px 80px;
+  color: white;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 15px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.card__button:hover {
+  color: #1f2222;
+  background-color: #fff;
+}
+
+.contact__container {
+  background-color: #151818;
+  width: 100%;
+  text-align: center;
+}
+
+.contact__text,
+.contact__form {
+  padding: 40px 0;
+}
+
+form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+form button {
+  width: 10%;
+  margin-top: 50px;
+}
+
+textarea {
+  min-height: 100px;
+  height: 100%;
+}
+
+.contact__form input,
+textarea {
+  width: 50%;
+  height: 60px;
+  border: none;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #1f2222;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  color: white;
+  margin-bottom: 10px !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  resize: none;
+}
+
+.contact__form input:focus,
+textarea:focus {
+  background-color: #292c2c;
+}
+
+footer {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: #d6e6f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d6e6f4;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/*MEDIA MORE THAN FULL HD*/
+@media (min-width: 1920px) {
+  .artists__gallery {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/*MEDIA TABLET*/
+@media (max-width: 1025px) {
+  nav #click:checked ~ ul {
+    left: 0;
+  }
+  nav i {
+    display: block !important;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(14, 18, 18, 0.1);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    webkit-backdrop-filter: blur(20px);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+  }
+  nav ul li a {
+    color: white !important;
+    font-size: 22px;
+  }
+  nav ul li a:hover {
+    font-size: 26px;
+  }
+  .artists__gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .tickets__gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contact__form input,
+  .contact__form textarea {
+    width: 80%;
+  }
+  .contact__form button {
+    width: 80%;
+  }
+}
+
+/*MEDIA MOBILE*/
+@media (max-width: 940px) {
+  .container {
+    padding: 0 30px;
+  }
+  .header__text {
+    text-align: center;
+    width: 100%;
+  }
+  .header__text h1 {
+    font-size: 70px;
+  }
+  .header__text p {
+    font-size: 20px;
+  }
+  .artists__gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .artist__card {
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  footer li {
+    display: block;
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
